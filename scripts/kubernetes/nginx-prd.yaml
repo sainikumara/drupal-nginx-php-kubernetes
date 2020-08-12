@@ -7,9 +7,9 @@ spec:
   loadBalancerIP: xxx.xxx.xxx.xxx # Change to public from kubectl get cm ibm-cloud-provider-vlan-ip-config -n kube-system -o yaml
   ports:
     -
-      port: 80
+      port: 8080
       protocol: TCP
-      targetPort: 80
+      targetPort: 8080
   selector:
     app: nginx-prd
     tier: frontend
@@ -54,7 +54,7 @@ spec:
           imagePullPolicy: Always # Set to IfNotPresent to improve performance at the expense of caching.
           ports:
             -
-              containerPort: 80
+              containerPort: 8080
               name: http
           volumeMounts:
             -
