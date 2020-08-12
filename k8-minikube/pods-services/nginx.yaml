@@ -6,9 +6,9 @@ metadata:
 spec:
   ports:
     -
-      port: 80
+      port: 8080
       protocol: TCP
-      targetPort: 80
+      targetPort: 8080
   selector:
     app: nginx
     tier: frontend
@@ -41,7 +41,7 @@ spec:
           imagePullPolicy: IfNotPresent
           ports:
             -
-              containerPort: 80
+              containerPort: 8080
               name: http
           volumeMounts:
             -
