@@ -20,6 +20,6 @@ COPY nginx.conf /etc/nginx/nginx.conf
 COPY fastcgi_params /etc/nginx/fastcgi_params
 COPY fastcgi.conf /etc/nginx/conf.d/fastcgi.conf
 
-EXPOSE 80
+EXPOSE 8080
 
 CMD ["nginx", "-g", "daemon off;"]
