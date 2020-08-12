@@ -36,7 +36,7 @@ Switching the nginx service from `LoadBalancer` to `NodePort`:
     └─[$]> kubectl get services
     NAME         TYPE           CLUSTER-IP   EXTERNAL-IP   PORT(S)        AGE
     kubernetes   ClusterIP      10.0.0.1     <none>        443/TCP        1d
-    nginx        LoadBalancer   10.0.0.34    <pending>     80:32352/TCP   1d
+    nginx        LoadBalancer   10.0.0.34    <pending>     8080:32352/TCP 1d
     php-fpm      ClusterIP      10.0.0.93    <none>        9000/TCP       1d
     
     # Change spec.type to NodePort
@@ -46,7 +46,7 @@ Switching the nginx service from `LoadBalancer` to `NodePort`:
     └─[$]> kubectl get services
     NAME         TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)        AGE
     kubernetes   ClusterIP   10.0.0.1     <none>        443/TCP        1d
-    nginx        NodePort    10.0.0.34    <none>        80:32352/TCP   1d
+    nginx        NodePort    10.0.0.34    <none>        8080:32352/TCP 1d
     php-fpm      ClusterIP   10.0.0.93    <none>        9000/TCP       1d
     
     └─[$]> minikube service nginx
