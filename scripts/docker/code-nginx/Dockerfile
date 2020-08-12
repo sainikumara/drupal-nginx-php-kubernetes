@@ -39,6 +39,6 @@ WORKDIR /var/www/drupal/web
 COPY start.sh /root/
 RUN chmod +x /root/start.sh
 
-EXPOSE 80
+EXPOSE 8080
 
 ENTRYPOINT ["/root/start.sh"]
